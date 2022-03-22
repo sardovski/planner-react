@@ -1,10 +1,13 @@
-import Form from "../Components/Form";
-
+import { Outlet } from "react-router-dom";
+import Header from "../Components/Header/Header";
+import Footer from "../Components/Footer";
 
 function Home() {
     return (
         <>
-            <Form />
+            <Header />
+            <Outlet/>
+            <Footer/>
         </>
     )
 }

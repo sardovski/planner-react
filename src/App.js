@@ -1,7 +1,7 @@
 import './App.css';
-import Form from './Components/Form';
-import TaskList from './Components/Tasklist/TaskList';
+
 import { TaskProvider } from './Context/TaskListContext';
+import Router from './Router/Router';
 
 
 function App() {
@@ -9,8 +9,7 @@ function App() {
 
     <div className="App">
       <TaskProvider>
-      <Form/>
-      <TaskList/>
+        <Router/>
       </TaskProvider>
     </div>
   );
