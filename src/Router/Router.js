@@ -1,6 +1,7 @@
 import { BrowserRouter,Routes, Route, Outlet } from 'react-router-dom';
 import Home from '../Pages/Home';
 import Planner from '../Pages/Planner';
+import Welcome from '../Pages/Welcome';
 
 
 
@@ -10,7 +11,7 @@ function Router() {
         <Routes>
             <Route element={<Home/>}>
                 <Route path='/' element={ <Outlet />}>
-                    <Route index element={<h1>test</h1>} />
+                    <Route index element={<Welcome/>} />
                     <Route path='/Tasks' element={<Planner/>} />
                     <Route path='/About' element={<h1>About</h1>} />
 

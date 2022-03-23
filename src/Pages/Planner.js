@@ -6,7 +6,9 @@ function Planner() {
     return(
         <>
         <Form/>
+        <section>
         <TaskList/>
+        </section>
         </>
     );
 }
