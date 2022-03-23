@@ -1,0 +1,54 @@
+.list-task {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid white;
+    border-radius: 8px;
+    margin-bottom: 4px;
+    padding-left: 10px;
+    color: white;
+    background-color: #007effad;
+
+}
+
+.list-task span {
+    word-break: break-all;
+    align-self: center;
+}
+
+.controler-btns {
+    display: flex;
+    align-items: stretch;
+
+
+}
+
+.controler-btns::before{
+    content: "";
+    border-left: 1px solid white ;
+    margin: 5px;
+    height: 75%;
+    align-self: center;
+
+}
+
+.list-task.liComplete span{
+    animation: line 0.5s;
+    animation-fill-mode: forwards; 
+    
+}
+
+@keyframes line {
+    0%{
+
+    }
+    100%{
+        color: #a9a9a9;
+    text-decoration: line-through;
+    text-decoration-style: wavy;
+    text-decoration-thickness: 2px;
+    text-decoration-color: white;
+    text-shadow: 2px 2px  4px black;
+
+    }
+}

@@ -1,8 +1,8 @@
+import './Input.css'
 const Input = (props) => {
-
     return (
         <>
-            <label className="Add-Input-Label" >Add Task:
+            <label className="Add-Input-Label" >Add Task: 
             <i className="fa-solid fa-list-check"></i>
             <input className="Add-Input"
                 value={props.value}

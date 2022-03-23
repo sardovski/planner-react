@@ -13,7 +13,7 @@ function Router() {
                 <Route path='/' element={ <Outlet />}>
                     <Route index element={<Welcome/>} />
                     <Route path='/Tasks' element={<Planner/>} />
-                    <Route path='/About' element={<h1>About</h1>} />
+                    <Route path='/About' element={<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis natus cum dicta nostrum saepe reprehenderit omnis repudiandae fugiat consequatur veritatis!</p>} />
 
                 </Route>
             </Route>

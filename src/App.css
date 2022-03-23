@@ -1,14 +1,33 @@
 .App {
+  position: relative;
   text-align: center;
+  height: 100vh;
+  background: linear-gradient(0deg, rgba(246,255,126,0) 45%, rgb(167 94 94) 100%);
+  background-attachment: fixed;
+  background-size: auto;
+  color: white;
 }
 
 html,
 *,
 *::before,
 *::after {
+
     box-sizing: border-box;
     
 }
 body{
-    background-color: darkgray;
+  background-image: url('../public/sun-tornado.svg') ;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+    
+}
+
+.content-wraper{
+  position: absolute;
+  left: 50vw;
+  transform: translate(-50%);
+  max-width: 600px;
+  width: 100%;
 }

@@ -1,5 +1,7 @@
 import Button from "../Shared/Button";
 
+import './Task.css'
+
 function Task(props) {
     return (
         <>

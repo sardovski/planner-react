@@ -3,6 +3,8 @@ import Task from "../Task/Task";
 import idGen from "../../Utils/idGen"
 import deepCopyFunction from "../../Utils/deepCopyFunc";
 
+import './TaskList.css'
+
 const TaskList = () => {
 
     const [taskList, _, setNewTaskList] = useTaskList();
@@ -42,7 +44,7 @@ const TaskList = () => {
                             complete={onComplete} />
                     </li>
                 );
-            })}
+            }).reverse()}
         </ul>
     );
 

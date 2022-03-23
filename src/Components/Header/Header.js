@@ -2,6 +2,8 @@ import { useRef } from "react";
 import { Link } from "react-router-dom";
 import useOnscreen from "../../Hooks/OnScreen";
 
+import './Header.css'
+
 function Header() {
 
     const elRef = useRef(null);
@@ -13,7 +15,7 @@ function Header() {
 
     return (
         <>
-            <header >
+            <header className="header">
                 <nav className="nav">
                     <ul className={isVisible ? '' : 'bg'}>
                         <li className="nav-item">
@@ -24,7 +26,7 @@ function Header() {
                     </ul>
                 </nav>
             </header>
-            <br ref={elRef} className="cross" />
+            <div ref={elRef} className="cross" > </div>
         </>
     );
 }

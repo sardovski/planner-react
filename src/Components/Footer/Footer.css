@@ -1,0 +1,8 @@
+.footer{
+    position: fixed;
+    bottom: 0;
+    left: 50vw;
+    transform: translate(-50%);
+    background-color: rgba(0, 0, 0, 0.692);
+    width: 100%;
+}

@@ -1,0 +1,7 @@
+.list-holder {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+
+}
+

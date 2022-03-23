@@ -1,0 +1,71 @@
+.btn {
+    max-width: 70px;
+    height: 22px;
+    border: 1px solid white;
+    border-radius: 6px;
+    margin: 2px;
+    cursor: pointer;
+    align-self: center;
+    color: white;
+}
+
+.btn.add-btn.on {
+    background-color: #f0913d;
+}
+
+.btn.add-btn.off {
+    background-color: #ff923300;
+    border-color: gray;
+    color: gray;
+    animation: addBtn 1s;
+    animation-fill-mode: forwards; 
+}
+
+.btn.add-btn{
+    transition: 1s;
+    margin: 5px;
+    text-shadow: rgba(0, 0, 0, 0.5) 1px 1px 1px;
+
+}
+
+.btn.complete-btn{
+    background-color: #B6C234;
+    text-shadow: rgb(0, 0, 0, 0.5) 1px 1px 3px;
+}
+.btn.delete-btn{
+    background-color: #C2615B;
+    text-shadow: rgb(0, 0, 0, 0.5) 1px 1px 3px;
+}
+
+.start-btn {
+    border-radius: 6px;
+
+    border: 1px solid white;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 2px 5px;
+    font-size: 1rem;
+
+}
+
+.start-btn a{
+    text-decoration: none;
+    color: white;
+    text-shadow: rgba(0, 0, 0, 0.5) 1px 1px 1px;
+}
+
+.start-btn:hover{
+    transition: 0.4s;
+    transform: scale(1.5);
+}
+
+
+@keyframes addBtn {
+    0%{
+
+    }
+    100%{
+    transform: translate(100px);
+    opacity: 0;
+    }
+}
+

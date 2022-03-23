@@ -11,6 +11,7 @@ function Welcome() {
 
             <p>Let's get started here:</p>
             <Button 
+            class='start-btn'
             buttonText={<Link to={'/Tasks'}>Start</Link>}
             />
         </article>
