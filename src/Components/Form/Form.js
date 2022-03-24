@@ -1,14 +1,17 @@
 import { useState, useEffect } from "react";
 
 import { useTaskList } from "../../Context/TaskListContext";
+import { useSelected } from "../../Context/SelectedContext";
 
 import Button from "../Shared/Button";
 import Input from "../Input";
+import Select from "../Shared/Select";
 
 import './Form.css'
 
 const Form = () => {
     const [, updateTaskList ] = useTaskList();
+    const [selected, setSelected] = useSelected()
     const [input, setInput] = useState('');
     const [btnDisable, setBtnDisable] = useState(true);
 
@@ -32,9 +35,11 @@ const Form = () => {
             completed: false
         })
     }
-
     function onChangeInput(e) {
         setInput(() => e.target.value);
+    }
+    function onChangeSelect(e) {
+        setSelected(e.target.value)
     }
 
     return (
@@ -44,7 +49,11 @@ const Form = () => {
                 value={input}
                 onChangeInput={onChangeInput}
             />
-
+            <Select 
+            selected={selected} 
+            options={['All','Complete','Uncomplete']} 
+            onChange={onChangeSelect}
+            />
             <Button
                 class={`btn add-btn ${btnDisable ? 'off' : 'on'}`}
                 buttonText='Add'
