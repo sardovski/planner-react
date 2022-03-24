@@ -7,7 +7,6 @@ function SelectProvider (props) {
     const [selected, setSelected] = useState('All')
     
     function changeSelected(chose) {
-        console.log(chose);
         setSelected(()=>chose)
     }
 
