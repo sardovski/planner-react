@@ -54,6 +54,7 @@ const Form = () => {
             options={['All','Complete','Uncomplete']} 
             onChange={onChangeSelect}
             class='select-type'
+            labelClass='select-label'
             />
             <Button
                 class={`btn add-btn ${btnDisable ? 'off' : 'on'}`}

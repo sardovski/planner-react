@@ -2,7 +2,7 @@ import './Select.css'
 
 function Select(props) {
     return (
-        <label> By Type:
+        <label className={props.labelClass}> By Type:
             <select className={props.class} value={props.selected} onChange={props.onChange} >
                 {props.options.map(e => {
                     return (

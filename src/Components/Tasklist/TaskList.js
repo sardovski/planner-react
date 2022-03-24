@@ -6,8 +6,7 @@ import deepCopyFunction from "../../Utils/deepCopyFunc";
 import { useSelected } from "../../Context/SelectedContext";
 import './TaskList.css'
 
-const TaskList = () => {
-
+const TaskList = (props) => {
     const [taskList, _, setNewTaskList] = useTaskList();
     const [selected] = useSelected()
 
@@ -35,6 +34,7 @@ const TaskList = () => {
 
 
     return (
+        <section>
         <ul className="list-holder">
             {taskList.filter((e)=>{
 
@@ -58,6 +58,7 @@ const TaskList = () => {
                 );
             }).reverse()}
         </ul>
+        </section>
     );
 
 }
