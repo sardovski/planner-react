@@ -5,6 +5,8 @@ import { useTaskList } from "../../Context/TaskListContext";
 import Button from "../Shared/Button";
 import Input from "../Input";
 
+import './Form.css'
+
 const Form = () => {
     const [, updateTaskList ] = useTaskList();
     const [input, setInput] = useState('');
