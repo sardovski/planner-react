@@ -58,6 +58,15 @@
     transform: scale(1.5);
 }
 
+.btn.task-content-btn {
+background-color: #8a7ef0;
+}
+
+.task-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
 
 @keyframes addBtn {
     0%{

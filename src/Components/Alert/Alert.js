@@ -12,12 +12,8 @@ function Alert(props) {
    let [toPosition,setToPosition] = useState(null);
    let [show,setShow] = useState(null)
 
-    console.log(props.boxPosition.getBoundingClientRect());
-
     useEffect(()=>{
 
-      console.log(alertBox.current.getBoundingClientRect());
-      console.log(positionOfEl.y-(alertWindow.current.getBoundingClientRect()).y);
       setToPosition(positionOfEl.y-(alertWindow.current.getBoundingClientRect()).y - (alertBox.current.getBoundingClientRect()).height/2)
       setShow('100')
 
@@ -34,7 +30,7 @@ function Alert(props) {
                     <section ref={alertBox} style={{position:'absolute',top:toPosition,opacity:show}} > 
                      <p>{props.text}</p>
                      <div className="alert-window-btn">
-                        <Button onClick={props.onAccept} buttonText='OK' />
+                        <Button onClick={props.onAccept} buttonText='YES' />
                         <Button onClick={props.onDecline} buttonText='NO'/>
                      </div>
                      </section>
