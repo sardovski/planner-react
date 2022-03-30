@@ -16,3 +16,9 @@ textarea {
 textarea::placeholder{
     color: white;
 }
+
+textarea:focus{
+    transition: 0.5s;
+    transform: skew(720deg, 0deg);
+
+}

@@ -22,9 +22,10 @@ function Task(props) {
             <section className="task-content">
             <section className="task-content-title-show">
                 <span className={props.data.completed ? 'complete' : ''}>{props.data.text}</span>
-                {props.data.description ? <Button class='btn task-content-btn' buttonText={show} onClick={onShow}/> : null}
+                {!visibility[show] ? <p>{props.data.description}</p>: null}
             </section>
-                    {!visibility[show] ? <p>{props.data.description}</p>: null}
+            {props.data.description ? <Button class='btn task-content-btn' buttonText={show} onClick={onShow}/> : null}
+                    
                      
             </section>
             <div className="controler-btns">
