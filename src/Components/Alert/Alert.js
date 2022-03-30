@@ -9,12 +9,16 @@ function Alert(props) {
    const alertWindow = useRef(null) 
    const alertBox = useRef(null)
    let positionOfEl = props.boxPosition.getBoundingClientRect(); 
+   let positionOfElParent = props.boxPosition.parentNode.getBoundingClientRect();
    let [toPosition,setToPosition] = useState(null);
    let [show,setShow] = useState(null)
+   console.log(props.boxPosition.parentNode.getBoundingClientRect());
+   console.log(props.boxPosition.getBoundingClientRect());
 
-    useEffect(()=>{
-
-      setToPosition(positionOfEl.y-(alertWindow.current.getBoundingClientRect()).y - (alertBox.current.getBoundingClientRect()).height/2)
+   useEffect(()=>{
+       
+      // - (alertBox.current.getBoundingClientRect()).height/2
+      setToPosition(positionOfEl.y-(alertWindow.current.getBoundingClientRect()).y - ((positionOfElParent.height + positionOfEl.height)/2))
       setShow('100')
 
       return () => {

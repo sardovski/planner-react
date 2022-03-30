@@ -46,23 +46,24 @@ const TaskList = (props) => {
 
     }
 
-
+    
     return (
         <>
         <section className="task-wraper">
         {alert.confirm ? <Alert boxPosition={alert.boxPosition} text='Are you sure?' onAccept={onDelete} onDecline={onDeclineDelete}/> : ''}
             <ul className="list-holder">
-                {taskList.filter((e) => {
+                {taskList.reduce((a,e) => {
 
                     if (selected === 'All') {
-                        return e;
+                        a.push(e);
                     } else if (selected === 'Complete' && e.completed) {
-                        return e;
+                        a.push(e);
                     } else if (selected === 'Uncomplete' && e.completed === false) {
-                        return e;
+                        a.push(e);
                     }
+                    return a;
 
-                }).map(e => {
+                },[]).map(e => {
 
                     return (
                         <li className={`list-task ${e.completed ? 'liComplete' : 'liUncomplete'}`} key={idGen()}>

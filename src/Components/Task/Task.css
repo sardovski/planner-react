@@ -18,8 +18,8 @@
     /* transform: scale(1.01); */
    
     background-position: 100% 0;
-    transition: all 1s ease-in-out;
-    transform: scale(1.01);
+    transition: all 0.5s ease-in-out;
+    /* transform: scale(1.01); */
     animation: border 2.5s infinite;
 
 }
@@ -61,6 +61,7 @@
     margin: 4px;
     text-align: justify;
     font-weight: 400;
+    word-break: break-all;
 }
 .task-content {
     display: flex;
