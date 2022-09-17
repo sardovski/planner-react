@@ -1,13 +1,12 @@
-import { useMemo, useState } from "react";
+import { useState } from "react";
 import Button from "../Shared/Button";
 
 import './Task.css'
 
 function Task(props) {
 
-    const visibility = useMemo(()=>{
-        return {'Hide':0,'Show':1}
-    })
+    const visibility ={'Hide':0,'Show':1};
+   
 
 
     const [show, setShow] = useState('Show');
